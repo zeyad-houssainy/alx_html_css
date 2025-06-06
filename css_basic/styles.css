@@ -1,0 +1,12 @@
+article, aside {
+    border: 1px solid blue;
+}
+
+main {
+    display: flex;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
