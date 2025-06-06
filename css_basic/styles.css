@@ -1,12 +1,40 @@
+
+
 article, aside {
     border: 1px solid blue;
+    overflow-y: auto
 }
 
-main {
-    display: flex;
+@media screen and (min-width: 576px) {
+    
+    main {
+        display: flex;
+        flex-direction: row;
+        flex: auto
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    article {
+        flex: 2
+    }
+    
+    aside {
+        flex: 1
+    }
+    
 }
 
-body {
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width: 576px) {
+    
+    article, aside {
+        border: 1px solid blue;
+    }
+    
+    .works_on_smartphone {
+        flex-direction: column;
+    }
 }
+
