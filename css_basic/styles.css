@@ -1,8 +1,27 @@
 
 
 article, aside {
-    border: 1px solid blue;
     overflow-y: auto
+}
+
+nav ul li *{
+    padding: 5px;
+    border-radius: 4px;
+}
+
+nav ul li *:hover {
+    
+    border: 1px solid rgba(0, 0, 150, 0.2);
+}
+
+header {
+    border-bottom: 1px solid black;
+}
+
+footer {
+    border-top: 1px solid rgb(0, 0, 0, 0.5);
+    padding-bottom: auto;
+    justify-self: center;
 }
 
 @media screen and (min-width: 576px) {
@@ -29,12 +48,18 @@ article, aside {
 
 @media screen and (max-width: 576px) {
     
-    article, aside {
-        border: 1px solid blue;
-    }
     
     .works_on_smartphone {
         flex-direction: column;
+    }
+
+    nav {
+        justify-self: center;
+    }
+
+    header {
+
+        padding-bottom: 0;
     }
 }
 
