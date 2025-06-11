@@ -88,10 +88,11 @@ h2 {
     text-align: center;
     line-height: normal;
     margin-bottom: 90px;
-
+    font-weight: 300;
 }
 
 h3 {
+    font-weight: bolder;
     font-size: 18px;
     line-height: 27px;
 }
@@ -111,7 +112,7 @@ button {
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -220,7 +221,6 @@ li a { /* Links within nav list items */
 }
 
 .pro-ticket h3 {
-    font-weight: 900;
     font-size: 18px;
 }
 
