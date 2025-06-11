@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,96 +12,83 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /* font: inherit; */
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
 /* ************************************ */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap'); */
 
 
+/* Root Variables */
 :root {
     --primary-font-color: #FFFFFF;
     --purple-color: #C271FF;
 }
 
-
-* {
-    font-family: 'Source Sans Pro', sans-serif, monospace;
-    font-optical-sizing: auto;
-    font-style: normal;
+/* Universal Selector for general element styling */
+*,
+*::before,
+*::after {
+    font-family: 'Source Sans Pro',"Source Sans 3", sans-serif, monospace;
     font-size: 12px;
     text-decoration: none;
     color: #FFFFFF;
     padding: 0;
     margin: 0;
+    font-weight: lighter;
 }
 
+/* General Heading Styles (applied globally where not overridden) */
+h1 {
+    font-size: 120px;
+    justify-self: center;
+    align-self: center;
+    margin-top: 200px;
+    text-align: center;
+    font-weight: bold;
+}
 
-
-/* Any headline in the project is H2*/
 h2 {
-    font-size: 34px;
+    font-size: 32px;
+    justify-self: center;
+    align-self: center;
     text-align: center;
-}
+    line-height: normal;
+    margin-bottom: 90px;
 
-
-/* Nav Bar */
-
-nav{
-    padding: 34px 120px 0 34px;
-    text-align: center;
-}
-
-.nav-bar {
-    margin-left: auto;
-    margin-right: 100px;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    text-decoration: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-nav ul, nav {
-    display: flex;
-    flex-direction: row;
 }
 
 h3 {
@@ -109,88 +96,13 @@ h3 {
     line-height: 27px;
 }
 
-.landing-wrapper {
-    background-image: url(images/Object.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.intro {
-    /* border: 1px solid yellow; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-h1 {
-    font-size: 120px;
-    justify-self: center;
-    align-self: center;
-    margin-top: 200px;
-    text-align: center; 
+strong {
+    color: #C271FF;
     font-weight: bold;
+     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.spans {
-    display: flex;
-    flex-direction: row;
-    gap: 90px;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-
-li a {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.round-image {
-    border-radius: 50%;
-}
-
-
-
-.pros {
-    display: flex;
-    flex-direction: column;
-    /* border: 1px solid blue; */
-    justify-content: center;
-    padding-top: 300px;
-    gap: 30px;
-}
-
-.pro-tickets {
-    display: flex;
-    flex-direction: row;
-    gap: 140px;
-    justify-content: center;
-    text-align: center;
-}
-
-.pro-ticket {
- /* border: 1px solid yellow; */
- width: 150px;
- display: flex;
- flex-direction: column;
- justify-content: center;
- line-height: 25px;
- font-size: 16px;
-}
-
-.pro-ticket h3 {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.pro-ticket image {
-    width: ;
-}
-
-
+/* General Button Styles (applied globally where not overridden) */
 button {
     border: 0px;
     background-color: var(--purple-color);
@@ -203,21 +115,124 @@ button {
     font-weight: 700;
 }
 
-.section1 button {
-    margin-top: 150px;
-}
-
 button:hover {
     background-color: grey;
 }
 
 
-.qoutes {
-    font-size: 22px;
-    border: 1px solid green;
-    
+/* --- HTML Structure Based Styling --- */
+
+/* .landing-wrapper (Outer container / Background) */
+.landing-wrapper {
+    background-image: url(images/Object.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
+/* Header Section */
+header {
+    /* No explicit styles provided for header itself, only its children */
+}
+
+/* Nav Bar (inside header) */
+nav{
+    padding: 34px 120px 0 34px;
+    text-align: center;
+}
+
+nav ul, nav { /* This targets both nav and its ul children for flex row */
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+li a { /* Links within nav list items */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Main Content Sections */
+
+/* Intro Section (within main) */
+.intro {
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spans {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.section1 button { /* Specific button in section1 */
+    margin-top: 40px;
+}
+
+/* Pros Section (within main, part of section1's larger div) */
+.pros {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    justify-content: center;
+    margin-top: 170px;
+    gap: 30px;
+}
+
+.pro-tickets {
+    display: flex;
+    flex-direction: row;
+    gap: 140px;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid green;
+    margin-bottom: 100px;
+}
+
+
+
+.pro-user {
+    border: 1px solid yellow;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.pro-ticket h3 {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.pro-ticket image { /* Note: This should likely be .pro-ticket img if targeting <img> tags */
+    width: 160px ; /* This value is empty in your original CSS */
+}
+
+.round-image { /* Applied to image elements */
+    border-radius: 50%;
+}
+
+/* Section 2 */
 .section2 {
     background-color: var(--purple-color);
     display: flex;
@@ -225,9 +240,37 @@ button:hover {
     align-content: center;
     height: 392px;
     align-items: center;
-    
+    justify-content: center;
+    gap: 55px;
     /* display: none; */
 }
+
+.qoutes {
+    font-size: 22px;
+    border: 1px solid green;
+    text-align: start;
+    line-height: 30px;
+    width: 730px;
+    /* font-family: sans-serif; */
+}
+
+.qoutes blockquote {
+ margin-bottom: 20px;
+}
+
+.qoutes h3{
+    margin: 0;
+    padding: 0;
+    font-weight: 2000px;
+    font-size: 22px;
+}
+
+.qoutes p{
+    margin: 0;
+    padding: 0;
+}
+
+/* Placeholder Sections (as per your HTML comments) */
 .section3 {
     background-color: rgb(215, 215, 253);
     /* display: none; */
@@ -239,4 +282,9 @@ button:hover {
 .section5 {
     background-color: rgb(215, 215, 253);
     /* display: none; */
+}
+
+/* Footer Section */
+footer {
+    /* No explicit styles provided for footer itself, only its children */
 }
