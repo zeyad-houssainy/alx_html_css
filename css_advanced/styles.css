@@ -65,7 +65,7 @@ table {
     font-family: 'Source Sans Pro',"Source Sans 3", sans-serif, monospace;
     font-size: 12px;
     text-decoration: none;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     padding: 0;
     margin: 0;
     font-weight: lighter;
@@ -87,7 +87,7 @@ h2 {
     align-self: center;
     text-align: center;
     line-height: normal;
-    margin-bottom: 90px;
+    /* margin-bottom: 90px; */
     font-weight: 300;
 }
 
@@ -103,6 +103,10 @@ strong {
      font-family: 'Source Sans Pro', sans-serif;
 }
 
+a {
+    color: #FFFFFF;
+}
+
 /* General Button Styles (applied globally where not overridden) */
 button {
     border: 0px;
@@ -114,6 +118,7 @@ button {
     border-radius: 20px;
     font-size: 14px;
     font-weight: 700;
+    color: #FFFFFF;
 }
 
 button:hover {
@@ -129,6 +134,7 @@ button:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    color: #FFFFFF;
 }
 
 /* Header Section */
@@ -151,7 +157,7 @@ nav ul, nav { /* This targets both nav and its ul children for flex row */
     margin-left: auto;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 55px;
     text-decoration: none;
     text-align: center;
     justify-content: center;
@@ -167,7 +173,7 @@ li a { /* Links within nav list items */
 
 /* Intro Section (within main) */
 .intro {
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,13 +182,14 @@ li a { /* Links within nav list items */
 .spans {
     display: flex;
     flex-direction: row;
-    gap: 90px;
+    gap: 60px;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: bold;
 }
+
 
 .section1 button { /* Specific button in section1 */
     margin-top: 40px;
@@ -195,7 +202,7 @@ li a { /* Links within nav list items */
     border: 1px solid blue;
     justify-content: center;
     margin-top: 170px;
-    gap: 30px;
+    gap: 90px;
 }
 
 .pro-tickets {
@@ -220,6 +227,8 @@ li a { /* Links within nav list items */
     font-size: 16px;
 }
 
+
+
 .pro-ticket h3 {
     font-size: 18px;
 }
@@ -242,6 +251,7 @@ li a { /* Links within nav list items */
     align-items: center;
     justify-content: center;
     gap: 55px;
+    color: #FFFFFF;
     /* display: none; */
 }
 
@@ -272,9 +282,44 @@ li a { /* Links within nav list items */
 
 /* Placeholder Sections (as per your HTML comments) */
 .section3 {
-    background-color: rgb(215, 215, 253);
-    /* display: none; */
+    padding: 85px 0;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    /* height: 450px; */
+    border: 4px solid green;
+    justify-content: center;
 }
+ .section3 h2 {
+    /* margin-top: 85px; */
+    /* margin-bottom: 75px; */
+ }
+
+.tutorial-lyout {
+    /* margin: 85px 110px; */
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 30px;
+    justify-content: center;
+}
+
+.tutorial {
+    border: 1px solid red;
+    height: 335px;
+    width: 255px;
+}
+
+.image-icon {
+    width: 30px;
+}
+
+
+
+
+
 .section4 {
     background-color: rgb(89, 89, 245);
     /* display: none; */
@@ -286,5 +331,7 @@ li a { /* Links within nav list items */
 
 /* Footer Section */
 footer {
-    /* No explicit styles provided for footer itself, only its children */
+    background-color: #071629;
+    height: 250px;
+    display: none;
 }
