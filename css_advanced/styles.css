@@ -144,7 +144,7 @@ header {
 
 /* Nav Bar (inside header) */
 nav{
-    padding: 34px 120px 0 34px;
+    padding:  34px 120px 0 120px     ;
     text-align: center;
 }
 
