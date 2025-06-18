@@ -1,0 +1,171 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 3. Enable keyword animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+  
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 6. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 7. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 9. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    10. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+  /* ################################################## */
+  /* ################################################## */
+  /* ################################################## */
+  /* ################################################## */
+
+/* ----- Global Selections ----- */
+:root{
+    --primary-color: #FF6565; /* color: #FF6565 */
+    --button-hover-active-opacity: 0.9; /* opacity: 0.9 */
+  }
+
+* {
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
+    
+}
+
+body, body::after {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+a:hover {
+    opacity: var(--button-hover-active-opacity);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    height: 44px;
+    width: 162px;
+    border: none;
+    /* padding: 5px; */
+}
+
+button:hover {
+    opacity: var(--button-hover-active-opacity);
+}
+
+h1 {
+    font-size: 32px;
+    border: 1px solid;
+}
+
+p {
+    font-size: 16px;
+    overflow-wrap: break-word;
+}
+
+/* header-nav Section Together  */
+.section-1 {
+    background-image: url('/images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+
+
+/* ------ Header Section ----- */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 25px 5% 0 5%;
+    border: 1px solid red;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style: none;
+}
+
+nav{
+    margin-left: auto;
+}
+
+.icon {
+    width: 160px;
+    height: 30px;
+}
+
+/* Hero Section  */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px solid yellow;
+    margin-top: 300px;
+    margin-bottom: 115px;
+    /* padding: 20px; */
+    /* max-width: 1000px; */
+}
+
+.hero-section > p:last-child {
+    margin-top: 15px;
+}
+
+.hero-section > *:not(button){
+    width: 100%;
+}
