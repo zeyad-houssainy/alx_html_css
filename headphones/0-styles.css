@@ -54,6 +54,10 @@
     isolation: isolate;
   }
 
+  .show-on-mobile {
+    display: none;
+  }
+
 
 
   /* ################################################## */
@@ -70,6 +74,8 @@
 * {
     color: white;
     font-family: "Source Sans Pro", sans-serif;
+    overflow-wrap: break-word;
+    word-break: break-word;
     
 }
 
@@ -79,9 +85,9 @@ body, body::after {
 }
 
 
-
 a:hover {
     opacity: var(--button-hover-active-opacity);
+    color: var(--primary-color);
 }
 
 a {
@@ -104,11 +110,61 @@ button:hover {
 h1 {
     font-size: 32px;
     border: 1px solid;
+    font-weight: 500;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h3 strong {
+  font-size: 46px;
 }
 
 p {
     font-size: 16px;
     overflow-wrap: break-word;
+    font-weight: 100;
+
+    /* margin-left: 300px;  */
+}
+
+section {
+  padding: 80px;
+}
+
+/* Flex global settings  */
+.column-flex {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.row-flex {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+}
+
+.intro {
+  gap: 40px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border: 1px solid green;
+}
+
+.intro p {
+  border: 1px solid blue;
+  text-align: center;
+  max-width: 640px;
 }
 
 /* header-nav Section Together  */
@@ -118,6 +174,14 @@ p {
     background-position: top center;
     background-repeat: no-repeat;
     justify-content: center;
+}
+
+.section-1 * {
+  justify-items: center;
+}
+
+.menu-icon {
+  display: none;
 }
 
 
@@ -147,19 +211,20 @@ nav{
     height: 30px;
 }
 
+.font-14 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
 /* Hero Section  */
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
     justify-content: center;
     text-align: center;
     align-items: center;
     border: 1px solid yellow;
-    margin-top: 300px;
-    margin-bottom: 115px;
-    /* padding: 20px; */
-    /* max-width: 1000px; */
+    margin-top: 220px;
+    margin-bottom: 35px;
+    /* padding-bottom: 0; */
 }
 
 .hero-section > p:last-child {
@@ -168,4 +233,132 @@ nav{
 
 .hero-section > *:not(button){
     width: 100%;
+}
+
+
+@media (max-width: 480px) {
+  /* deelte this line below */
+  *::after, * {
+    color: yellow;
+  }
+
+  .show-on-mobile {
+    display: initial;
+  }
+
+  .icon {
+    margin: 20px auto 0 auto;
+    width: 60%;
+    height: auto;
+    border: 1px dashed green;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Sidebar adjustment  */
+  nav{
+    display: none;
+  }
+
+  /* Menu Icon */
+  .menu-icon{
+    border: 1px solid white;
+    width: 30px; 
+    height: 25px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    cursor: pointer;
+    margin-bottom: 25px;
+  }
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: #ffffff;
+  }
+
+  .bar2 {
+    width: 70%;
+    height: 3px;
+    display: block;
+    background-color: #ffffff;
+  }
+
+  /* Show/Hide Toggle */
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle:checked ~ nav {
+    display: block; 
+    background-color: blue; 
+  }
+}
+
+/* ------ Section 2----- */
+.section-2 {
+  gap: 100px;
+}
+
+.section-2 *{
+  color: #071629;
+  text-align: center;
+}
+
+.section-2-intro {
+  gap: 40px;
+}
+
+.what-we-do-container {
+  /* width: 210px; */
+  border: 1px dashed green;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.what-we-do-container image {
+  /* width: 10 */
+}
+
+.ticket {
+  border: 1px solid rgb(214, 20, 20);
+  width: 210px;
+}
+
+
+.ticket * {
+  text-align: center;
+}
+
+/* Section 3  */
+.section-3 {
+  background-image: url('/images/headphones_hero_2.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.section-3 *{
+  /* color: black; */
+}
+
+.pentagone-container {
+  gap: 75px;
+}
+
+
+.pentagone {
+  background-image: url('/images/pentagone.png'); 
+  background-size:contain; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  margin-top: 20px;
 }
