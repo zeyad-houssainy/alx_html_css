@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="0-styles.css">
+        <link rel="stylesheet" href="styles.css">
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
         <link rel="stylesheet" href="/images/holberton_school-icon/style.css">
         <title>headphones</title>
@@ -12,7 +12,7 @@
     <body>
 
         <!-- Section 1 - Header -->
-        <div class="section-1">
+        <div class="section-1 white-color">
             <!-- Header Section -->
             <header class="header">
                 <div class="show-on-mobile">
@@ -28,21 +28,21 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#">what we do</a></li>
-                        <li><a href="#">our results</a></li>
-                        <li><a href="#">contact us</a></li>
+                        <li><a href="#" class="white-color">what we do</a></li>
+                        <li><a href="#" class="white-color">our results</a></li>
+                        <li><a href="#" class="white-color">contact us</a></li>
                     </ul>
                 </nav>
             </header>
 
             <!-- Hero Section -->
-            <section class="hero-section intro">
+            <section class="hero-section intro column-flex">
                 <div>
                     <!-- text here need to be wrapped correctly -->
                     <h1 >Lorem ipsum dolor set<wbr /> lorem ipsum</h1>
                     <p>Lorem ipsum dolor set amet lorem ipsum dolor set</p>
                 </div>
-                <button>CALL TO ACTION</button>
+                <button class="red-button">CALL TO ACTION</button>
                 <p>
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -84,7 +84,6 @@
                         <p class="font-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                     <div class="ticket column-flex">
-                        <!-- <span class="holberton_school-icon-ic_hearing"></span> -->
                         <img src="/images/zeyad.jpg" alt="Icon from the folder">
                         <h3>Lorem ipsum</h3>
                         <p class="font-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -92,7 +91,7 @@
                 </div>
         <!-- Section 3 - Our results -->
          </section>
-         <Section class="section-3 column-flex">
+         <Section class="section-3 column-flex white-color">
              <div class="intro column-flex">
                  <h2>Our results speak for themselves</h2>
                  <p>
@@ -102,18 +101,54 @@
                     ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
                     in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
-         </div>
-         <div class="pentagone-container row-flex">
-            <div class="ticket pentagone column-flex">
-                <h3><strong>+2%</strong></h3>
-                <p>Lorem ipsum dolor</p>
             </div>
-            
-         </div>
+            <div class="pentagone-container row-flex">
+                <div class="ticket pentagone column-flex">
+                    <h3><strong>+2%</strong></h3>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+                <div class="ticket pentagone column-flex">
+                    <h3><strong>+2%</strong></h3>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+                <div class="ticket pentagone column-flex">
+                    <h3><strong>+2%</strong></h3>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+                <div class="ticket pentagone column-flex">
+                    <h3><strong>+2%</strong></h3>
+                    <p>Lorem ipsum dolor</p>
+                </div>
+            </div>
          </Section>
+         <!-- Section 4  -->
+          <section class="section-4 intro column-flex">
+            <h2>Contact us</h2>
+            <form class="form column-flex">
+                <div>
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" name="email" >
+                </div>
+                <div>
+                    <label for="message">Your message</label><br>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message"></textarea><br>
+                </div>
+                <input type="submit" id="submit" class="red-button">
+            </form>
+            
+          </section>
+
         <main>
             
         </main>
-        <footer></footer>
+        <footer class="row-flex">
+            <img src="/images/logo_headphones.png" alt="logo icon" class="icon">
+            <p>©headphones 2020</p>
+            <!-- Add icons here -->
+        </footer>
     </body>
 </html>
